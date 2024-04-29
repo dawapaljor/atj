@@ -46,7 +46,7 @@ export default {
 		  },
 		},
 		backgroundImage: {
-			'hero-pattern': "url('/pictures/news.jpg')",
+			'hero-pattern': "bg-gradient-to-bl from-slate-200 to-gray-200,url('/pictures/news.jpg')",
 		  }
 	 },
 	 
