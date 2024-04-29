@@ -45,7 +45,11 @@ export default {
 			'100%': { transform: 'translateX(0%)' },
 		  },
 		},
+		backgroundImage: {
+			'hero-pattern': "url('/pictures/news.jpg')",
+		  }
 	 },
+	 
 	},
 	plugins: [
 		require('flowbite/plugin')
