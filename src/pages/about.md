@@ -2,6 +2,18 @@
 layout: ../layouts/Page.astro
 title: About
 ---
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2">
+        <div>
+            <img class="object-cover object-center w-full h-40 max-w-full rounded-lg"
+            src="/pictures/gathering.jpg"
+            alt="gallery-photo" />
+        </div>
+        <div>
+            <img class="object-cover object-center w-full h-40 max-w-full rounded-lg"
+            src="/pictures/press.jpg"
+            alt="gallery-photo" />
+        </div>
+ </div>
 
 ##  Our History
 

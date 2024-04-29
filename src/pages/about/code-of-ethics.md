@@ -1,4 +1,3 @@
-
 ---
 layout: ../../layouts/Page.astro
 title: Code of Ethics

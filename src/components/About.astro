@@ -4,58 +4,125 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Container>
-    <div class="grid md:grid-cols-6 sm:grid-cols-1  gap-4 md:px-14 xl:px-14 rounded-3xl"> 
-        <div class="row md:col-span-6 pt-10">
-            <h2 class="text-4xl text-lime text-center">Our History</h2>
+    <div class="relative flex flex-col items-center md:flex-row pt-20" id="about">
+        <div class="row items-center py-5 md:pr-16 md:w-5/12 md:py-10">
+            <div class="text-center md:text-left space-y-3 bg-lime">
+                <h2 class="text-4xl font-medium leading-none sm:text-6xl">About Us</h2>
+            </div>
         </div>
-        <div class=" items-center py-5  md:pt-10 col-span-4">
-                   <div class=" space-y-10 mt-6 mb-8  text-xl font-normal leading-7 sm:mb-12">
-                       
-                       <p>
-                           In 1997, the Tibetan journalists working in Dharamsala met to form an organisation. The outcome was the immediate initiation of the Association of Tibetan Journalists. Subsequently, a formal Charter was adopted and the association commenced to function, even with the meagre resources available at that time.
-                       </p>
-                       <p>
-                           Pema Dhondup, the former Producer and Editor of Sargyur, a periodical video news magazine, was elected the first President of the associaton. Rabsel, the former Editor of Tibet Times, a Tibetan language newspaper published three times a month, was elected as Vice President.
-                       </p>
-                      <p>
-                       At the completion of Pema Dhondup’s tenure, Rabsel took over the post of President. He served until the current President, Lobsang Wangyal, commenced his tenure on 12 May 2002.
-                      </p>
-                      <p>
-                       Ugyen Norbu, a former reporter of Radio Free Asia, served as the General Secretary since the inception of the association, until his resignation at the end of July 2004 to pursue further studies in the US.
-                      </p>
-                      
-                   </div>
-       </div>
-       <div class="items-center py-5  md:pt-10 col-span-2 p-5">
-        <p class="text-lg font-bold py-5">
-            The founding members are:
-           </p>
-           <ul>
-                <li><b>Pema Dhondup</b>,<br> former Producer and Editor of Sargyur</li>
-                <li><b>Rabsel</b>, <br> former Editor of the Tibet Times</li>
-                <li><b>The late Kunsang Paljor</b>, <br> reporter of Radio Voice of Tibet</li>
-                <li><b>Ugyen Norbu</b>, <br> former reporter of Radio Free Asia</li>
-                <li><b>Karma Yeshi</b>, <br>former Editor of Tibetan Rangzen</li>
-                <li><b>The late Pema Lhundup</b>, <br>former Editor of English Rangzen</li>
-                <li><b>Lobsang Wangyal</b>, <br>freelance photojournalist.</li>
-           </ul>
-       </div>
-
-        <div class="md:col-span-6 flex flex-row pb-20 ">
-            <a class="w-full px-9 mx-10 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex " rel="noopener noreferrer"  href="/about/resolution" target="_blank">
+        <div class="flex items-center py-5 md:w-10/12 md:py-10">
+            <p class="text-xl font-normal leading-7 text-center md:text-left">
                 
-                <h2 class="text-center  text-xl font-normal leading-7">Resolution</h2>
-            </a>
-            <a class="w-full px-9 mx-10 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex" rel="noopener noreferrer"  href="/about/code-of-ethics" target="_blank">
-                            
-                <h2 class="text-center  text-xl font-normal leading-7">Code of Ethics</h2>
-            </a>
-            <a class=" w-full px-9 mx-10 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex" rel="noopener noreferrer"  href="/about/memorandum" target="_blank">
-                            
-                <h2 class="text-center  text-xl font-normal leading-7">Memorandum</h2>
-            </a>
-        </div>   
-   </div>
+            </p>
+        </div>
+    </div> 
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 xl:px-14 rounded-3xl">
+            <div class="items-center py-5  md:pt-10 sm:col-span-12 md:col-span-12 lg:col-span-12">
+                <h2 class="text-4xl text-lime text-center">Our History</h2>
+            </div> 
+            <div class="items-center   md:pt-10 sm:col-span-12 md:col-span-12 lg:col-span-12 ">      
+                    <div class="space-y-10 mt-6 text-xl font-normal leading-7 sm:mb-12"> 
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2">
+                            <div>
+                              <img class="object-cover object-center w-full h-40 max-w-full rounded-lg"
+                                src="/pictures/gathering.jpg"
+                                alt="gallery-photo" />
+                            </div>
+                            <div>
+                              <img class="object-cover object-center w-full h-40 max-w-full rounded-lg"
+                                src="/pictures/press.jpg"
+                                alt="gallery-photo" />
+                            </div>
+                          </div> 
+                        <p>
+                            In 1997, the Tibetan journalists working in Dharamsala met to form an organisation. The outcome was the immediate initiation of the Association of Tibetan Journalists. Subsequently, a formal Charter was adopted and the association commenced to function, even with the meagre resources available at that time.
+                        </p>
+                        
+                        <p>
+                            Pema Dhondup, the former Producer and Editor of Sargyur, a periodical video news magazine, was elected the first President of the associaton. Rabsel, the former Editor of Tibet Times, a Tibetan language newspaper published three times a month, was elected as Vice President.
+                        </p>
+                        <p>
+                        At the completion of Pema Dhondup’s tenure, Rabsel took over the post of President. He served until the current President, Lobsang Wangyal, commenced his tenure on 12 May 2002.
+                        </p>
+                        <p>
+                        Ugyen Norbu, a former reporter of Radio Free Asia, served as the General Secretary since the inception of the association, until his resignation at the end of July 2004 to pursue further studies in the US.
+                        </p>
+                    </div>
+            </div>
+        <div class=" items-center   sm:col-span-12 md:col-span-12 lg:col-span-12 md:grid justify-between grid-cols-6 ">
+           <div class="col-span-3">
+                <p class="text-lg font-bold py-5">
+                    The founding members are:
+                </p>
+                <ul class="text-sm">
+                        <li><b>Pema Dhondup</b>, former Producer and Editor of Sargyur</li>
+                        <li><b>Rabsel</b>, former Editor of the Tibet Times</li>
+                        <li><b>The late Kunsang Paljor</b>, reporter of Radio Voice of Tibet</li>
+                        <li><b>Ugyen Norbu</b>, former reporter of Radio Free Asia</li>
+                        <li><b>Karma Yeshi</b>,former Editor of Tibetan Rangzen</li>
+                        <li><b>The late Pema Lhundup</b>,former Editor of English Rangzen</li>
+                        <li><b>Lobsang Wangyal</b>,freelance photojournalist.</li>
+                </ul>
+           </div>
+           <div class=" col-span-3">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 py-20">
+                <a class=" px-9  py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl  gap-2.5 inline-flex " rel="noopener noreferrer"  href="/about/resolution" >
+                    <h2 class="text-center  text-xl font-normal leading-7">Resolution</h2>
+                </a>
+                <a class=" px-9  py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl  gap-2.5 inline-flex" rel="noopener noreferrer"  href="/about/code-of-ethics" >             
+                    <h2 class="text-center  text-xl font-normal leading-7">Code of Ethics</h2>
+                </a>
+                <a class="   px-9  py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl  gap-2.5 inline-flex" rel="noopener noreferrer"  href="/about/memorandum">          
+                    <h2 class="text-center  text-xl font-normal leading-7">Memorandum</h2>
+                </a>
+                <a class="  px-9  py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl  gap-2.5 inline-flex"   data-modal-target="default-modal" data-modal-toggle="default-modal"> <!-- Modal toggle -->      
+                    <h2 class="text-center  text-xl font-normal leading-7">Objectives</h2>
+                </a>
+  <!-- Main modal -->
+  <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+      <div class="relative p-4 w-full max-w-2xl max-h-full">
+          <!-- Modal content -->
+          <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <!-- Modal header -->
+              <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                  <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Aims and Objectives
+                  </h3>
+                  <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                  </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <p>The Association of Tibetan Journalists is an independent non-profit making organisation whose aims are to: Facilitate free, fair and accurate delivering of information regarding activities relating to the Tibetan community, both within and outside of Tibet. Function as a monitoring agency of the Tibetan Government in Exile, regarding the democratic processes implemented. Ensure the welfare and professional indemnity of Tibetan journalists within their professional jurisdiction.</p>
+                <p><b>Objectives:</b></p>
+                <p>1. To support the needs of Tibetan journalists in providing a professional level of journalism.</p>
+                <p>2. To protect the democratic right of freedom of speech.</p>
+                <p>3. To bridge the gab between the government and the people through the dissemination of information, and by providing a forum for discussion on issues of national interest and other related activities.</p>
+                <p>4. To inform the scattered Tibetan community of the evolving strategies of our freedom struggle.</p>
+                <p>5. To provide fair and accurate news of the situation and developments within Tibet.</p>
+                <p>6. To promote dialogue between Tibetans and other cultures.</p>
+                <p>7. To carry out research and analysis on Tibetan issues.</p>
+                <p>8. To provide training in various fields of communication technology.</p>
+                <p>9. To function as the centralised advertisement agency to disburse advertising and other paid notices in Tibetan media outlets. (to be discussed in the next meeting of the ATJ)</p>
+                <p>10. To inform and make available to members and concerned others government press releases and information which are of national interest.</p>
+              </div>
+              <!-- Modal footer -->
+              <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                  <button data-modal-hide="default-modal" aria-hidden="true" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+            </div> 
+            </div>    
+    </div>
+
+  
    
 </Container>
 

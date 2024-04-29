@@ -52,3 +52,4 @@ Feel free to check [Astro documentation](https://docs.astro.build) or jump into 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ced08ec9-97ba-43ec-a614-de6728521e90/deploy-status)](https://app.netlify.com/sites/tibetanjournalists/deploys)
