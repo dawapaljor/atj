@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
+import Footer2 from '../components/Footer2.astro';
 import Marquee from "../components/Marquee.astro";
 
 const { frontmatter,title,intro } = Astro.props;
@@ -21,13 +21,16 @@ const { frontmatter,title,intro } = Astro.props;
       name="description"
       content="In Association of Tibetan Journalists, we believe in the power of collaboration to drive greater transparency and integrity in reporting."
     />
-	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+
   </head>
-  <body class=" font-specialElite space-y-20 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100">
+  <body class=" font-sanchez   space-y-20 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100">
     <Navbar />
     <slot />
-    <Footer/>
+    <Footer2/>
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
   </body>
 </html>

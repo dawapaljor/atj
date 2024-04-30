@@ -28,8 +28,8 @@ export default {
 	  },
 	  extend: {
 		fontFamily: {
-			SpaceGrotesk: ["Space Grotesk", "sans-serif"],
-			specialElite:["Special Elite"],
+
+			sanchez: ["Sanchez"],
 		},
 		animation: {
 		  marquee: 'marquee 25s linear infinite',
