@@ -2,7 +2,7 @@
 import Container from "./Container.astro"
 ---
 <footer
-  class="bg-zinc-50 text-center text-surface/75 dark:bg-neutral-700 dark:text-white/75 lg:text-left">
+  class="bg-zinc-50 text-center text-surface/75 dark:bg-neutral-700 dark:text-white/75 lg:text-left bg-gradient-to-t from-slate-100 via-stone-100 to-neutral-50">
   <Container>
   <div
     class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-white/10 lg:justify-between">
@@ -154,9 +154,10 @@ import Container from "./Container.astro"
                 d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
             </svg>
           </span>
-          info@tibetanjournalists.net
+          info(@)tibetanjournalists.net
         </p>
-        <p class="mb-4 flex items-center justify-center md:justify-start">
+        <!--
+                  <p class="mb-4 flex items-center justify-center md:justify-start">
           <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -184,18 +185,17 @@ import Container from "./Container.astro"
           </span>
           + 01 234 567 89
         </p>
+         -->
       </div>
     </div>
   </div>
 
   <!--Copyright section-->
-  <div class="bg-black/5 p-6 text-center flex items-center">
-    <span>© 2023 Copyright:</span>
-        <a class="font-semibold" href="https://tw-elements.com/">
+  <div class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-white/10 lg:justify-between">
+    <span> © 2024 Copyright:Association of Tibetan Journalists</span>
+    <a class="font-semibold" href="https://tw-elements.com/"> Managed by: 
         <img src="/tibcert-200.svg" alt="tibcert-logo" class="w-24">
-  </a>
-
-
+    </a>
   </div>
 </Container>
 </footer>
