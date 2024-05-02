@@ -10,20 +10,20 @@
             "media": "Assistant Editor at Tibettimes"
         },
         {
-            "title": "Voice Of Tibet",
-            "name": "Tenzin Gyurmay",
-            "description": "Working as a News Reporter at Voice of Tibet since 2012",
-            "profile": "/team/gyurmay.jpg",
+            "title": "Accountant",
+            "name": "Tenzin Gyurmey",
+            "description": "Since 2018, serving as a news reporter and anchor for Voice of Tibet, a Tibetan shortwave radio station located in Dharmsala, Himachal Pradesh.",
+            "profile": "/team/gyurmay.jpeg",
             "link": "/",
             "media": "News reporter at VOT"
         },
         {
-            "title": "VOA",
-            "name": "Kalsang Jigme",
-            "description": "7+ years of experience in project management and team leadership. Strong organizational and communication skills",
-            "profile": "/team/kalsang-jigme.jpg",
+            "title": "Vice President",
+            "name": "Tenzin Nyidon",
+            "description": "Tenzin Nyidon, a reporter at Phayul.com, completed her Masters in International Relations at Jawaharlal Nehru University. With experience since January 2022, she specializes in producing analytical reports and video news for the leading English-language Tibetan exile news outlet.",
+            "profile": "/team/nyidon.jpeg",
             "link": "/",
-            "media": "Assistant Editor at Tibettimes"
+            "media": "Reporter at Phayul"
         }
 
     ],
