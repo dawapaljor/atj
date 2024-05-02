@@ -17,17 +17,17 @@ import teamData from './Data/team.json';
 <div class="flex-row items-center py-5" id="team">
     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4">
     {
-    teamData.team.map(({ title, description, name, link, profile} ) => (
-    <div class="h-[331px] px-[35px] py-10 bg-white rounded-[45px] shadow border border-zinc-900 flex-col justify-start items-start gap-2.5 inline-flex text-black">
+    teamData.team.map(({ title, description, name, link, profile,media} ) => (
+    <div class="h-auto p-5 sm:p-5 md:p-10 py-10 bg-white rounded-xl shadow  flex-col justify-start items-start gap-2.5 inline-flex text-black">
         <div class="flex-col justify-start items-start gap-7 flex">
             <div class="self-stretch justify-start items-start inline-flex">
                 <div class="grow shrink basis-0 justify-start items-center gap-8 flex">
                     <div class="h-[102.82px] left-0 top-0 relative">
-                        <img src={profile} alt={name}/>
+                        <img src={profile} alt={name} class=" transition w-24 grayscale  rounded-lg hover:scale-125 hover:sepia "/>
                     </div>
                     <div class="flex-col justify-end items-start inline-flex">
                         <div class="text-lg font-normal">{title}</div>
-                        <div class="text-xl font-medium">{name}</div>
+                        <div class="text-xl font-bold">{name}</div>
                     </div>
                 </div>
                 <a class="top-0 right-0" href={link}>
@@ -35,9 +35,13 @@ import teamData from './Data/team.json';
                 </a>
             </div>
             <hr class="w-full border border-black"/>
-            <p class="text-sm md:text-lg">{description}</p>
+            <p class="text-sm md:text-lg">{description}
+            <br/>
+                <span class="text-sm text-lime"> {media} </span>
+            
+            </p>
         </div>
-    </div>
+     </div>
     ))
     }
     </div>

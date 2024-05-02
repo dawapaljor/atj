@@ -52,3 +52,4 @@ President: Lobsang Wangyal
 Vice President: Lhaksam  
 PRO: Tenzin Paldon  
 Member: Lungrik
+

@@ -1,26 +1,29 @@
 {
     "team":
-    [
+        [ 
+        {
+            "title": "President",
+            "name": "Kelsang Jinpa",
+            "description": "10 + years of experience in translation and content creation. Strong organizational and communication skills.",
+            "profile": "/team/kelsang-jinpa.jpeg",
+            "link": "/",
+            "media": "Assistant Editor at Tibettimes"
+        },
         {
             "title": "Voice Of Tibet",
             "name": "Tenzin Gyurmay",
-            "description": "Woring as a News Reporter at Voice of Tibet since 2012",
+            "description": "Working as a News Reporter at Voice of Tibet since 2012",
             "profile": "/team/gyurmay.jpg",
-            "link": "/"
+            "link": "/",
+            "media": "News reporter at VOT"
         },
         {
             "title": "VOA",
             "name": "Kalsang Jigme",
             "description": "7+ years of experience in project management and team leadership. Strong organizational and communication skills",
             "profile": "/team/kalsang-jigme.jpg",
-            "link": "/"
-        },
-        {
-            "title": "Tibet Action",
-            "name": "Kalsang",
-            "description": "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization",
-            "profile": "/team/c1.png",
-            "link": "/"
+            "link": "/",
+            "media": "Assistant Editor at Tibettimes"
         }
 
     ],
