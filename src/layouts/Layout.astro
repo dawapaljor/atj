@@ -25,6 +25,15 @@ const { frontmatter,title,intro } = Astro.props;
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PMDDZBRDHM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PMDDZBRDHM');
+  </script>
   </head>
   <body class=" font-sanchez   bg-gradient-to-br from-orange-100 via-orange-50 to-orange-50 scroll-smooth">
     <Navbar />
