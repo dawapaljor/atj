@@ -1,4 +1,4 @@
-# Positivus - Digital Marketing Agency Landing Page
+# ATJ
 
 Introducing "Positivus" - a stunning and versatile Astro theme designed for digital marketing agencies.
 
