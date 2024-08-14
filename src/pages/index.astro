@@ -9,6 +9,10 @@ import Case from '../components/Case.astro';
 import Projects from '../components/Projects.astro';
 import Fnq from '../components/Fnq.astro';
 import About from '../components/About.astro';
+import Marquee from '../components/Marquee.astro';
+import Partnership from '../components/Partnership.astro'
+import BlogSummary from '../components/BlogSummary.astro'
+
 
 
 ---
@@ -16,10 +20,15 @@ import About from '../components/About.astro';
 <Layout title="Home" intro="In Association of Tibetan Journalists, we believe in the power of collaboration to drive greater transparency and integrity in reporting.">
 	<main class="space-y-20">
 		<Hero/>
+		
+		<BlogSummary/>
+	
 		<Testimonial/>
 		<About></About>
 		
 		<Team/>
+		
 		<Contact/>
+		<Partnership/>
 	</main>
 </Layout>

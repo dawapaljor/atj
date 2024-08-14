@@ -1,0 +1,106 @@
+---
+import Container from "../../components/Container.astro"
+import { getCollection } from 'astro:content';
+import { Picture } from 'astro:assets';
+import BaseLayout from '../../layouts/Layout.astro'
+
+// Define a basic structure for the pagination result
+type PaginationResult = {
+    currentPage: number;
+    lastPage: number;
+    data: any[]; // Adjust the type to match the structure of your paginated items
+    url: {
+        prev?: string;
+        next?: string;
+    };
+};
+//.sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+
+type PaginateFunction = (items: any[], config: { pageSize: number }) => Promise<PaginationResult>;
+
+
+export async function getStaticPaths({ paginate }: { paginate: PaginateFunction }) {
+    const pages = await getCollection('posts', ({ data }) => {
+        return data.draft !== true; // Filter out drafts if necessary
+    });
+    return paginate(pages, { pageSize: 3}); // Adjust pageSize as needed
+}
+
+const { page }: { page: PaginationInfo } = Astro.props;
+const { prev, next } = page.url;
+
+// Define a type for the pagination information
+type PaginationInfo = {
+    currentPage: number;
+    lastPage: number;
+    data: PostItem[];
+    url: {
+        prev?: string;
+        next?: string;
+    };
+};
+
+// Define a type for the individual post item
+type PostItem = {
+    data: {
+        title: string;
+        description: string;
+        image: string;
+        imageAlt: string;
+        pubdate: number;
+    };
+    slug: string;
+};
+---
+<BaseLayout>
+<Container>
+
+  <div class="text-center space-y-10 mt-28">
+    <h4 class="text-4xl text-lime text-center font-bold"><b>Blog</b></h4>
+</div>
+  <div class="py-0 sm:py-10 sm:pb-24 grid grid-cols-3 justify-around ">
+    {page.data.map(({ data, slug }) => (
+    <div class=" rounded-2xl  m-5 bg-white flex flex-col justify-between">
+        <div class="w-full">
+            <Picture  class="rounded-xl mt-3" formats={['avif', 'webp']} src={data.image} alt="{data.imageAlt}"  width="900" height="100" class="m-auto"/>
+        </div>
+          <h2 class="text-2xl font-bold pt-5 text-lime px-8">{data.title}</h2>
+          <p class="px-8 py-5">{data.description}</p>
+        
+        <div class="flex justify-between border-t-lime border-t-2 p-3 px-8">
+            <div class="text-sm py-3 ">
+                <span>{data.pubdate}</span>
+                <span>Tibetan Journalist </span>
+            </div>
+            <a href={`/posts/${slug}`}><img src="/clients/icons/arrow-right.svg"></a>
+        </div>
+    </div>
+    ))}
+    </div>
+<div class="text-center">
+          <p>Page {page.currentPage} of {page.lastPage}</p>
+  
+          <div class="text-center">
+              {prev && <a href={prev} class="inline-block mr-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">Previous Page</a>}
+              {next && <a href={next} class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">Next Page</a>}
+          </div>
+      </div>
+<!-- 
+  <div class="py-0 sm:py-10 sm:pb-24 flex items-center">
+    <div class="  rounded-2xl p-8 m-5 bg-white">
+        <img class="rounded-xl " src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="vector"/>
+        <h2 class="text-2xl font-bold pt-5 text-lime">Heading</h2>
+        <p class="e py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, tenetur corrupti amet nostrum delectus vel quia dolores autem iusto pariatur rem perspiciatis repellendus mollitia nam, officia illo magni, quaerat possimus.</p>
+        <div class="flex justify-between border-t-lime border-t-2 p-3 ">
+            <div class="text-sm py-3 ">
+                <span>15/0/2024</span>
+                <span>Tibetan Journalist </span>
+            </div>
+            <a href="#"><img src="/clients/icons/arrow-right.svg"></a>
+        </div>
+    </div>
+    </div>
+</Container>
+    --> 
+    
+</BaseLayout>
