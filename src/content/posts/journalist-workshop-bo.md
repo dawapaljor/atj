@@ -1,5 +1,5 @@
 ---
-title: 'Four day Journalism workshop successfully concluded -bo'
+title: 'གསར་འགོད་པ་རྣམས་ལ་ཉིན་བཞིའི་རིང་གསར་འགྱུར་ལས་རིགས་དང་འབྲེལ་བའི་ཆེད་ལས་ཟབ་སྦྱོང་ལེགས་གྲུབ་བྱུང་བ།'
 description: 'ཕྱི་ལོ་ ༢༠༢༣ ཟླ་ ༡༢ ཚེས་  ༤ ནས་ ༧ བར་ཉིན་གྲངས་བཞིའི་རིང་གསར་འགོད་མཐུན་ཚོགས་ཀྱི་རྒྱུན་ལས་སྐབས་བཅུ་གཅིག་པའི་གོ་སྒྲིག་འོག '
 image: "../media/workshop-1.jpeg"
 imageAlt: "make a blog."
