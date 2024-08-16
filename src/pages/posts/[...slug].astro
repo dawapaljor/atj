@@ -71,7 +71,7 @@ const nextPost = allPosts[currentIndex + 1];
   
 
 
-    <div style="width: 600px; margin: auto auto; text-align: center;">
+    <div class="text-center py-10">
   
       <!-- Previous Post Link -->
     
@@ -82,15 +82,17 @@ const nextPost = allPosts[currentIndex + 1];
         </a> 
       </div> -->
       {previousPost && (
-        <a style="margin-left: 0; text-align: left" href={`/posts/${previousPost.slug}`} class="text-blue-500 hover:text-blue-700"> ⬅️ Previous: {previousPost.data.title}</a>
+        <a  href={`/posts/${previousPost.slug}`} class="text-blue-500 hover:text-blue-700 text-center"> ⬅️ Previous: 
+        <p class="text-xl">{previousPost.data.title}</p>
+      </a>
      )}
       <!-- Next Post Link -->
       {nextPost && (
-         <a  style="margin-right: 0; text-align: right" href={`/posts/${nextPost.slug}`} class="text-blue-500 hover:text-blue-700">
-          Next :{nextPost.data.title} ➡️
+        
+         <a  href={`/posts/${nextPost.slug}`} class="text-blue-500 hover:text-blue-700 text-center">
+          <p> Next : ➡️</p>
+         <p class="text-xl">{nextPost.data.title} </p>
         </a>
       )}
     </div>
-
-    
     </Layout>
