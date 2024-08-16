@@ -3,7 +3,7 @@ title: 'Four day Journalism workshop successfully concluded -bo'
 description: 'ཕྱི་ལོ་ ༢༠༢༣ ཟླ་ ༡༢ ཚེས་  ༤ ནས་ ༧ བར་ཉིན་གྲངས་བཞིའི་རིང་གསར་འགོད་མཐུན་ཚོགས་ཀྱི་རྒྱུན་ལས་སྐབས་བཅུ་གཅིག་པའི་གོ་སྒྲིག་འོག '
 image: "../media/workshop-1.jpeg"
 imageAlt: "make a blog."
-pubDate: 2024-08-14
+pubDate: 2024-08-11
 tags: ["astro", "learning", "coding", "blog"]
 ---
 ![workshop-2](/src/images/workshop-1.jpeg)

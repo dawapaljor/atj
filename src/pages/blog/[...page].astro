@@ -23,7 +23,7 @@ export async function getStaticPaths({ paginate }: { paginate: PaginateFunction 
     const pages = await getCollection('posts', ({ data }) => {
         return data.draft !== true; // Filter out drafts if necessary
     });
-    return paginate(pages, { pageSize: 3}); // Adjust pageSize as needed
+    return paginate(pages.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),), { pageSize: 3}); // Adjust pageSize as needed
 }
 
 const { page }: { page: PaginationInfo } = Astro.props;
@@ -47,7 +47,7 @@ type PostItem = {
         description: string;
         image: string;
         imageAlt: string;
-        pubdate: number;
+        pubDate: string;
     };
     slug: string;
 };
@@ -69,8 +69,12 @@ type PostItem = {
         
         <div class="flex justify-between border-t-lime border-t-2 p-3 px-8">
             <div class="text-sm py-3 ">
-                <span>{data.pubdate}</span>
-                <span>Tibetan Journalist </span>
+                <span>{data.pubDate.toLocaleDateString("en-us", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}</span>
+                <span> | Tibetan Journalist </span>
             </div>
             <a href={`/posts/${slug}`}><img src="/clients/icons/arrow-right.svg"></a>
         </div>
