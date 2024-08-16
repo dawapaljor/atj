@@ -2,6 +2,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import Container from "../../components/Container.astro"
 
 
 export async function getStaticPaths() {
@@ -52,9 +53,18 @@ const nextPost = allPosts[currentIndex + 1];
 ---
 
 <Layout frontmatter={entry.data}>
-  
+ <Container>
+  <div class="relative flex flex-col-reverse items-center md:flex-row " id="hero">
+    <div class="row items-center py-5 md:pb-20 md:pt-10">
+        <div class=" space-y-10  mb-8  text-xl font-normal leading-7 sm:mb-12 mt-20" id="post">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 text-center">{entry.data.title}</h2>
     <Content />
+    </div>
+  </div>
+ </Container>
   
+
+
     <div style="width: 600px; margin: auto auto; text-align: center;">
   
       <!-- Previous Post Link -->
@@ -75,4 +85,6 @@ const nextPost = allPosts[currentIndex + 1];
         </a>
       )}
     </div>
+
+    
     </Layout>

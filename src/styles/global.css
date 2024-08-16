@@ -42,3 +42,9 @@ h6{
 .md-page ul li,.md-page ol li{
  list-style-type: disc;
 }
+
+#post img{
+  padding:10px;
+  width:600px;
+  margin:0px auto
+}
