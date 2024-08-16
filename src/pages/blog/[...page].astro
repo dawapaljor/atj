@@ -47,7 +47,7 @@ type PostItem = {
         description: string;
         image: string;
         imageAlt: string;
-        pubDate: BigIntToLocaleStringOptions;
+        pubDate: Date;
         
     };
     slug: string;
@@ -70,7 +70,11 @@ type PostItem = {
         
         <div class="flex justify-between border-t-lime border-t-2 p-3 px-8">
             <div class="text-sm py-3 ">
-                <span>{data.pubDate.toISOString().slice(0,10)}</span>
+                <span>{data.pubDate.toLocaleDateString("en-us", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}</span>
                 <span> | Tibetan Journalist </span>
             </div>
             <a href={`/posts/${slug}`}><img src="/clients/icons/arrow-right.svg"></a>
