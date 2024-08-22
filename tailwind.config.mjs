@@ -28,7 +28,7 @@ export default {
 	  },
 	  extend: {
 		fontFamily: {
-
+			monlam: ["monlam"],
 			sanchez: ["Sanchez"],
 		},
 		animation: {

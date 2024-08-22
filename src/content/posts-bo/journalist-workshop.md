@@ -5,6 +5,7 @@ image: "../media/workshop-1.jpeg"
 imageAlt: "make a blog."
 pubDate: 2024-08-11
 tags: ["astro", "learning", "coding", "blog"]
+translation: "/posts/journalist-workshop"
 ---
 ![workshop-2](../media/workshop-1.jpeg)
 ![workshop-2](../media/workshop-2.jpeg)
