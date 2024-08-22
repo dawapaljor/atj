@@ -53,7 +53,7 @@ const nextPost = allPosts[currentIndex + 1];
 
 ---
 
-<Layout frontmatter={entry.data}>
+<Layout title={entry.data.title} content={entry.data.description}>
  <Container>
   <div class="relative flex flex-col-reverse items-center md:flex-row " id="hero">
     <div class="row items-center py-5 md:pb-20 md:pt-10">

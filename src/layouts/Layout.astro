@@ -17,10 +17,7 @@ const { frontmatter,title,intro } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     
     <title>{title}</title>
-    <meta
-      name="description"
-      content="In Association of Tibetan Journalists, we believe in the power of collaboration to drive greater transparency and integrity in reporting."
-    />
+    <meta name="description" content={intro}/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
