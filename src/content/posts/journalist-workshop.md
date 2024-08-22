@@ -3,6 +3,7 @@ title: 'Four day Journalism workshop successfully concluded '
 description: 'The Tibetan Journalist Association organized a four day workshop on Journalism to Tibetan Journalist based at Dharamsala from 4 to 7 December 2023'
 image: "../media/workshop-2.jpeg"
 imageAlt: "make a blog."
+translation: "/posts-bo/journalist-workshop"
 pubDate: 2024-08-14
 tags: ["astro", "learning", "coding", "blog"]
 ---

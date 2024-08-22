@@ -5,6 +5,7 @@ const postsCollection = defineCollection({
       title: z.string(),
       pubDate: z.date(),
       description: z.string(),
+      translation: z.string(),
       author: z.optional(z.string()),
       image: image().refine((img) => img.width >= 600, {
         message: "Cover image must be at least 600 pixels wide!",

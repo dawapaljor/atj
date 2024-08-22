@@ -6,7 +6,7 @@ import Container from "../../components/Container.astro"
 
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('posts');
+  const blogEntries = await getCollection('posts-bo');
   return blogEntries.map(entry => ({
     params: { slug: entry.slug }, props: { entry },
   }));
@@ -58,7 +58,7 @@ const nextPost = allPosts[currentIndex + 1];
   <div class="relative flex flex-col-reverse items-center md:flex-row " id="hero">
     <div class="row items-center py-5 md:pb-20 md:pt-10">
         <div class=" space-y-10  mb-8  text-xl font-normal leading-7 sm:mb-12 mt-20" id="post">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold  text-lime text-center">{entry.data.title}</h2>
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 text-center">{entry.data.title}</h2>
           <p class="mb-4 text-xl  text-gray-700 text-center">{entry.data.pubDate.toLocaleDateString("en-us", {
             year: "numeric",
             month: "short",
@@ -68,9 +68,13 @@ const nextPost = allPosts[currentIndex + 1];
     </div>
   </div>
  </Container>
+  
+
 
     <div class="text-center py-10">
+  
       <!-- Previous Post Link -->
+    
       <!-- <div>
         <a href={`/posts/${previousPost.slug}`} class="text-blue-500 hover:text-blue-700">Previous: {previousPost.data.title}
          {previousPost.data.image && (
@@ -78,14 +82,14 @@ const nextPost = allPosts[currentIndex + 1];
         </a> 
       </div> -->
       {previousPost && (
-        <a  href={`/posts/${previousPost.slug}`} class="text-blue-500 hover:text-blue-700 text-center"> ⬅️ Previous: 
+        <a  href={`/posts-bo/${previousPost.slug}`} class="text-blue-500 hover:text-blue-700 text-center"> ⬅️ Previous: 
         <p class="text-xl">{previousPost.data.title}</p>
       </a>
      )}
       <!-- Next Post Link -->
       {nextPost && (
         
-         <a  href={`/posts/${nextPost.slug}`} class="text-blue-500 hover:text-blue-700 text-center">
+         <a  href={`/posts-bo/${nextPost.slug}`} class="text-blue-500 hover:text-blue-700 text-center">
           <p> Next : ➡️</p>
          <p class="text-xl">{nextPost.data.title} </p>
         </a>
