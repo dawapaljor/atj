@@ -1,11 +1,12 @@
 ---
 import Container from "../components/Container.astro"
+import { fade,slide} from "astro:transitions";
 ---
 
 <Container>
     <div class="relative flex flex-col items-center md:flex-row pt-20" id="about" >
         <div class="row items-center py-5 md:pr-16 md:w-5/12 md:py-10">
-            <div class="text-center md:text-left space-y-3 bg-lime">
+            <div transition:animate={slide({ duration: '1s' })} class="text-center md:text-left space-y-3 bg-lime">
                 <h2 class="text-4xl font-bold leading-none sm:text-6xl">About Us</h2>
             </div>
         </div>

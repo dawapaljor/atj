@@ -3,6 +3,8 @@ import "../styles/global.css";
 import Navbar from '../components/Navbar.astro';
 import Footer2 from '../components/Footer2.astro';
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+import { ViewTransitions } from "astro:transitions";
+
 
 const { frontmatter,title,intro } = Astro.props;
 ---
@@ -17,6 +19,8 @@ const { frontmatter,title,intro } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     
     <title>{title}</title>
+    <ViewTransitions />
+
     <meta name="description" content={intro}/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">

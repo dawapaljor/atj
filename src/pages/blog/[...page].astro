@@ -3,6 +3,7 @@ import Container from "../../components/Container.astro"
 import { getCollection } from 'astro:content';
 import { Picture } from 'astro:assets';
 import BaseLayout from '../../layouts/Layout.astro'
+import { fade,slide } from "astro:transitions";
 
 // Define a basic structure for the pagination result
 type PaginationResult = {
@@ -62,8 +63,8 @@ type PostItem = {
 </div>
   <div class="py-0 sm:py-10 sm:pb-24 grid grid-cols-3 justify-around ">
     {page.data.map(({ data, slug }) => (
-    <div class=" rounded-2xl  m-5 bg-white flex flex-col justify-between relative">
-        <div class="w-full">
+    <div transition:animate={slide({ duration: '.5s' })} class=" rounded-2xl  m-5 bg-white flex flex-col justify-between relative">
+        <div class="w-full" >
             <Picture  class="rounded-xl mt-3" formats={['avif', 'webp']} src={data.image} alt="{data.imageAlt}"  width="900" height="100" class="m-auto"/>
         </div>
          
@@ -73,7 +74,7 @@ type PostItem = {
                 month: "short",
                 day: "numeric",
               })}</span>
-          <p class="px-8 py-3">{data.description}</p>
+          <p class="px-8 py-3" >{data.description}</p>
           
         <div class="flex justify-between border-t-lime border-t-2 p-3 px-8 ">
             {
